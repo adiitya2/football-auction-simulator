@@ -42,48 +42,69 @@ document.addEventListener("click", function () {
 </script>
 
 
-                </div>
                 <div class="form-group">
-                    <label for="teamSelect">Select Your IPL Team:</label>
+                    <label for="teamSelect">Select Your Football Club:</label>
                     <select id="teamSelect" required>
-                        <option value="Chennai Super Kings">Chennai Super Kings</option>
-                        <option value="Mumbai Indians">Mumbai Indians</option>
-                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
-                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
-                        <option value="Rajasthan Royals">Rajasthan Royals</option>
-                        <option value="Delhi Capitals">Delhi Capitals</option>
-                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
-                        <option value="Punjab Kings">Punjab Kings</option>
-                        <option value="Lucknow Super Giants">Lucknow Super Giants</option>
-                        <option value="Gujarat Titans">Gujarat Titans</option>
+                        <optgroup label="🇪🇸 Spain">
+                            <option value="Real Madrid">Real Madrid</option>
+                            <option value="FC Barcelona">FC Barcelona</option>
+                            <option value="Atletico Madrid">Atletico Madrid</option>
+                            <option value="Sevilla">Sevilla</option>
+                        </optgroup>
+                        <optgroup label="🏴 England">
+                            <option value="Manchester City">Manchester City</option>
+                            <option value="Liverpool">Liverpool</option>
+                            <option value="Arsenal">Arsenal</option>
+                            <option value="Manchester United">Manchester United</option>
+                            <option value="Chelsea">Chelsea</option>
+                            <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                            <option value="Newcastle United">Newcastle United</option>
+                        </optgroup>
+                        <optgroup label="🇮🇹 Italy">
+                            <option value="Inter Milan">Inter Milan</option>
+                            <option value="AC Milan">AC Milan</option>
+                            <option value="Juventus">Juventus</option>
+                            <option value="Napoli">Napoli</option>
+                            <option value="AS Roma">AS Roma</option>
+                        </optgroup>
+                        <optgroup label="🇩🇪 Germany">
+                            <option value="Bayern Munich">Bayern Munich</option>
+                            <option value="Borussia Dortmund">Borussia Dortmund</option>
+                        </optgroup>
+                        <optgroup label="🇫🇷 France">
+                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
+                        </optgroup>
+                        <optgroup label="🇵🇹 Portugal">
+                            <option value="Benfica">Benfica</option>
+                        </optgroup>
+                        <optgroup label="🇳🇱 Netherlands">
+                            <option value="Ajax">Ajax</option>
+                        </optgroup>
                     </select>
                 </div>
                 
                 <button type="submit" class="btn">Start Auction</button>
+
                 <div id="gameRulesSection">
                     <button id="showRulesButton" class="btn">Game Rules</button>
                     <div id="gameRules" class="game-rules hidden">
-                        <h2>🏏 Game Rules 🏏</h2>
+                        <h2>⚽ Game Rules ⚽</h2>
                         <ul>
-                            <li><strong>Objective:</strong> Your team needs to purchase players within your budget to create a squad.</li>
-                            <li><strong>Player Roles:</strong> Players are auctioned based on roles such as Opener, Top Order, Middle Order, Lower Middle Order etc.</li>
-                            <li><strong>Budget:</strong> Each team has a fixed budget. You cannot buy a player if you don't have enough budget.</li>
-                            <li><strong>Pass Button:</strong> If you don't want to buy a player, you can pass. Players who are passed on will be available for other teams to buy.</li>
-                            <li><strong>Role Constraints:</strong> You have to buy specific number of players based upon their roles.</li>
-                            <li><strong>Squad Limit:</strong> You must buy 11 players to fill your squad according to the team's requirements.</li>
-                            <li><strong>Auction Process:</strong> The auction is divided by roles, and after completing all players in one role, the next role starts. The auction continues until all roles are completed.</li>
-                            <li><strong>Victory:</strong> Once all players are bought and squads are formed, the auction ends.</li>
-                            <li><strong>Download Squads:</strong> At the end, you can download and share the squads of each team.</li>
+                            <li><strong>Objective:</strong> Build your dream football team by buying players within your budget.</li>
+                            <li><strong>Player Positions:</strong> Players will be auctioned based on positions such as Goalkeeper, Defender, Midfielder, and Forward.</li>
+                            <li><strong>Budget:</strong> Each club has a fixed budget. You cannot buy a player if you exceed the budget.</li>
+                            <li><strong>Pass Option:</strong> If you don't want to buy a player, you can pass. The player will then be available for other clubs to bid on.</li>
+                            <li><strong>Position Requirements:</strong> You must meet the minimum number of players for each position.</li>
+                            <li><strong>Squad Size:</strong> Your team must have 11 players to compete.</li>
+                            <li><strong>Auction Format:</strong> Players will be auctioned position by position. Once all players in one position are auctioned, the next position will start.</li>
+                            <li><strong>Victory:</strong> The auction ends once all clubs complete their squads.</li>
+                            <li><strong>Download Squads:</strong> At the end, you can download and share the squads of all clubs.</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            </div>
             </form>
-            
         </div>
     </div>
-
 
 
     <!-- Auction Page -->
@@ -195,6 +216,7 @@ document.addEventListener("click", function () {
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
