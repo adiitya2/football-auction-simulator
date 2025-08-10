@@ -1116,3 +1116,14 @@ function calculateTeamRating(team) {
     return teamRating.toFixed(1); // Returning the rating rounded to 1 decimal place
 }
 
+document.getElementById("startAuctionButton").addEventListener("click", function () {
+    const team = document.getElementById("teamSelect").value;
+    if (!team) {
+        alert("Please select a team.");
+        return;
+    }
+    document.getElementById("userTeamName").innerText = team;
+    document.getElementById("welcomePage").classList.add("hidden");
+    document.getElementById("auctionPage").classList.remove("hidden");
+});
+
