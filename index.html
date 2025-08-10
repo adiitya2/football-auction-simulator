@@ -41,66 +41,94 @@ document.addEventListener("click", function () {
 
 </script>
 
+<!-- Welcome Page -->
+<div id="welcomePage" class="page">
+    <div class="welcome-container">
+        <h1>⚽ Football Auction Simulator ⚽</h1>
+        <style>
+            body {
+              background-image: url('stadium.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;   
+            }
+        </style>
+        <form id="userDetailsForm" class="form-container">
+            <div class="form-group">          
+                <audio id="audioPlayer" src="ipl_background.mp3" loop></audio>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const audio = document.getElementById("audioPlayer");
+                        if (audio) {
+                            audio.volume = 0.5;
+                            audio.play().catch(error => console.log("Autoplay blocked, waiting for user interaction."));
+                        }
+                    });
+                    document.addEventListener("click", function () {
+                        const audio = document.getElementById("audioPlayer");
+                        if (audio && audio.paused) {
+                            audio.play();
+                        }
+                    }, { once: true });
+                </script>
+            </div>
 
-                <div class="form-group">
-                    <label for="teamSelect">Select Your Football Club:</label>
-                    <select id="teamSelect" required>
-                        <optgroup label="🏴 Spain">
-                            <option value="Real Madrid">Real Madrid</option>
-                            <option value="FC Barcelona">FC Barcelona</option>
-                            <option value="Atletico Madrid">Atletico Madrid</option>
-                            
-                        </optgroup>
-                        <optgroup label="🏴 England">
-                            <option value="Manchester City">Manchester City</option>
-                            <option value="Liverpool">Liverpool</option>
-                            <option value="Arsenal">Arsenal</option>
-                            <option value="Manchester United">Manchester United</option>
-                            <option value="Chelsea">Chelsea</option>
-                            <option value="Tottenham Hotspur">Tottenham Hotspur</option>
-                            
-                        </optgroup>
-                        <optgroup label="🏴 Italy">
-                            <option value="Inter Milan">Inter Milan</option>
-                            <option value="AC Milan">AC Milan</option>
-                            <option value="Juventus">Juventus</option>
-                            <option value="Napoli">Napoli</option>
-                        </optgroup>
-                        <optgroup label="🏴 Germany">
-                            <option value="Bayern Munich">Bayern Munich</option>
-                            <option value="Borussia Dortmund">Borussia Dortmund</option>
-                            <option value="RB Leipzig">RB Leipzig</option>
-                        </optgroup>
-                        <optgroup label="🏴 France">
-                            <option value="Paris Saint-Germain">Paris Saint-Germain</option>
-                        </optgroup>
-                       
-                    </select>
+            <div class="form-group">
+                <label for="teamSelect">Select Your Football Club:</label>
+                <select id="teamSelect" required>
+                    <optgroup label="🇪🇸 Spain">
+                        <option value="Real Madrid">Real Madrid</option>
+                        <option value="FC Barcelona">FC Barcelona</option>
+                        <option value="Atletico Madrid">Atletico Madrid</option>
+                    </optgroup>
+                    <optgroup label="🏴 England">
+                        <option value="Manchester City">Manchester City</option>
+                        <option value="Liverpool">Liverpool</option>
+                        <option value="Arsenal">Arsenal</option>
+                        <option value="Manchester United">Manchester United</option>
+                        <option value="Chelsea">Chelsea</option>
+                        <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                    </optgroup>
+                    <optgroup label="🇮🇹 Italy">
+                        <option value="Inter Milan">Inter Milan</option>
+                        <option value="AC Milan">AC Milan</option>
+                        <option value="Juventus">Juventus</option>
+                        <option value="Napoli">Napoli</option>
+                    </optgroup>
+                    <optgroup label="🇩🇪 Germany">
+                        <option value="Bayern Munich">Bayern Munich</option>
+                        <option value="Borussia Dortmund">Borussia Dortmund</option>
+                        <option value="RB Leipzig">RB Leipzig</option>
+                    </optgroup>
+                    <optgroup label="🇫🇷 France">
+                        <option value="Paris Saint-Germain">Paris Saint-Germain</option>
+                    </optgroup>
+                </select>
+            </div>
+            
+            <!-- FIX: changed type="submit" to type="button" -->
+            <button type="button" id="startAuctionButton" class="btn">Start Auction</button>
+
+            <div id="gameRulesSection">
+                <button id="showRulesButton" class="btn" type="button">Game Rules</button>
+                <div id="gameRules" class="game-rules hidden">
+                    <h2>⚽ Game Rules ⚽</h2>
+                    <ul>
+                        <li><strong>Objective:</strong> Build your dream football team by buying players within your budget.</li>
+                        <li><strong>Player Positions:</strong> Players will be auctioned based on positions such as Goalkeeper, Defender, Midfielder, and Forward.</li>
+                        <li><strong>Budget:</strong> Each club has a fixed budget. You cannot buy a player if you exceed the budget.</li>
+                        <li><strong>Pass Option:</strong> If you don't want to buy a player, you can pass. The player will then be available for other clubs to bid on.</li>
+                        <li><strong>Position Requirements:</strong> You must meet the minimum number of players for each position.</li>
+                        <li><strong>Squad Size:</strong> Your team must have 11 players to compete.</li>
+                        <li><strong>Auction Format:</strong> Players will be auctioned position by position. Once all players in one position are auctioned, the next position will start.</li>
+                        <li><strong>Victory:</strong> The auction ends once all clubs complete their squads.</li>
+                        <li><strong>Download Squads:</strong> At the end, you can download and share the squads of all clubs.</li>
+                    </ul>
                 </div>
-<button type="submit" class="btn">Start Auction</button>
-
-
-
-                <div id="gameRulesSection">
-                    <button id="showRulesButton" class="btn">Game Rules</button>
-                    <div id="gameRules" class="game-rules hidden">
-                        <h2>⚽ Game Rules ⚽</h2>
-                        <ul>
-                            <li><strong>Objective:</strong> Build your dream football team by buying players within your budget.</li>
-                            <li><strong>Player Positions:</strong> Players will be auctioned based on positions such as Goalkeeper, Defender, Midfielder, and Forward.</li>
-                            <li><strong>Budget:</strong> Each club has a fixed budget. You cannot buy a player if you exceed the budget.</li>
-                            <li><strong>Pass Option:</strong> If you don't want to buy a player, you can pass. The player will then be available for other clubs to bid on.</li>
-                            <li><strong>Position Requirements:</strong> You must meet the minimum number of players for each position.</li>
-                            <li><strong>Squad Size:</strong> Your team must have 11 players to compete.</li>
-                            <li><strong>Auction Format:</strong> Players will be auctioned position by position. Once all players in one position are auctioned, the next position will start.</li>
-                            <li><strong>Victory:</strong> The auction ends once all clubs complete their squads.</li>
-                            <li><strong>Download Squads:</strong> At the end, you can download and share the squads of all clubs.</li>
-                        </ul>
-                    </div>
-                </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
+</div>
+
 
 
     <!-- Auction Page -->
@@ -212,6 +240,7 @@ document.addEventListener("click", function () {
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
