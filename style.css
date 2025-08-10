@@ -1,0 +1,683 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    background: linear-gradient(135deg, #006bf6, #005ff8);
+    color: #000000;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Welcome Page */
+.welcome-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.background {
+    width: 100%;
+    height: 300px;
+    background-image: url('path/to/stadium.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 50%;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.btn {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+/* Auction Page */
+#auctionPage {
+    background-color: #000000;
+    padding: 20px;
+    line-height: 1.2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.header {
+    background-color: #ff9800;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auction-container {
+    display: grid;
+    color: white;
+    line-height: 1.2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.auction-window {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:large;
+    background: #000000;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.auction-window h2 {
+    color: #ff9800;
+    line-height: 1.2;
+    font-size: 20px;
+}
+
+.team-tabs {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.team-tabs button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    background: #444;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hidden {
+    display: none;  /* Hides the element */
+}
+.team-tabs button.active {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    background: #ff9800;
+    color: #fff;
+}
+
+.team-squad {
+    text-align: left;
+    color: #ffffff;
+    line-height: 1;
+    font-size: 14px;
+    overflow-y: auto;
+    height: 250px;
+}
+
+p {
+    margin: 0;          /* Remove any default margin from <p> */
+    padding: 0;         /* Optional: Remove padding if there's any */
+    line-height: 1.6;   /* Reduce line-height for tighter spacing */
+}
+
+strong {
+    margin-right: 5px;  /* Optional: Adjust space between label and value */
+}
+
+span {
+    display: inline;    /* Ensure <span> does not introduce vertical spacing */
+}
+
+
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buy {
+    background-color: #4caf50;
+    color: white;
+}
+
+.pass {
+    background-color: #f44336;
+    color: white;
+}
+
+.buy:hover, .pass:hover {
+    opacity: 0.8;
+}
+
+.budget, .upcoming {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.budget p, .upcoming p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.budget p span, .upcoming p span {
+    font-weight: bold;
+    color: #ff9800;
+}
+
+
+.upcoming ul {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.upcoming li {
+    margin: 5px 0;
+}
+
+
+.purchase-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+.game-rules {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+    margin: 20px 40px;
+    border: 2px solid #ccc;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+}
+
+/* Define custom properties for primary and secondary colors */
+:root {
+    --primary-color: #FFB81C;
+    --secondary-color: #006747;
+}
+
+/* Background uses secondary color so primary pops in content */
+body {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Buttons */
+button.buy {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button.pass {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Auction windows use both colors */
+.auction-window {
+    border: 2px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+}
+
+/* Headings */
+.auction-container h2 {
+    color: var(--primary-color);
+}
+
+
+/* You can also target other elements and dynamically change their colors */
+.role-change-message {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+#auction-summary {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+#teams-container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+
+.players-list {
+    
+    list-style-type: none;
+    padding-left: 0;
+}
+.hidden {
+    display: none;  /* Hides the element */
+}
+
+.players-list li {
+    margin-bottom: 8px;
+}
+.hidden {
+    display: none;  /* Hides the element */
+}
+
+.players-list li span {
+    font-weight: bold;
+}
+.hidden {
+    display: none;  /* Hides the element */
+}
+
+.players-list li .price {
+    color: #007BFF;
+}
+.hidden {
+    display: none;  /* Hides the element */
+}
+
+.summary-section {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.team-squad {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #000000;
+}
+
+.team-squad h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.team-squad ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-squad li {
+    margin-bottom: 5px;
+}
+
+/* Budget Window Container */
+.budget-container {
+    background-color: #f0f8ff; /* Light blue */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 10px;
+    padding: 10px; /* Compact padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-top: 10px;
+    width: 200px; /* Reduced width */
+    max-height: 400px; /* Sufficient height */
+    overflow-y: auto; /* Scrollable if content exceeds */
+    overflow-x: hidden;
+}
+
+/* Budget Table */
+.budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px; /* Adjusted font size */
+    background-color: #ffffff; /* White for table */
+    color: black;
+    font-weight: bolder;
+}
+
+.budget-table th, .budget-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 6px;
+}
+
+.budget-table th {
+    background-color: #333; /* Dark background for headers */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.budget-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color */
+}
+
+.budget-table tr:hover {
+    background-color: #ffe4b5; /* Light orange on hover */
+}
+
+/* Adjust Budget Window Header */
+.budget h2 {
+    text-align: center;
+    font-size: 16px; /* Smaller header size */
+    color: #4CAF50; /* Green Text */
+    font-weight: bold;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Add smooth scrolling for overflow */
+.budget-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.budget-container::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    margin: 5px 15px;
+    text-decoration: none;
+    color: #333;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+}
+.instagram-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.instagram-link:hover {
+    text-decoration: underline;
+}
+.instagram-logo {
+    width: 24px;  /* Adjust size of the logo */
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    body {
+      font-size: 14px;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .menu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  #downloadPDFButton {
+    position: absolute;  /* Use absolute positioning */
+    top: 40px;           /* Space from the top (you can adjust this value) */
+    left: 40px;          /* Space from the left side (you can adjust this value) */
+    padding: 10px 20px;  /* Padding for the button (optional for better appearance) */
+    background-color: #0044ff; /* Green background color */
+    color: white;        /* White text color */
+    border: none;        /* Remove border */
+    border-radius: 5px;  /* Rounded corners */
+    font-size: 14px;      /* Font size */
+    cursor: pointer;     /* Change cursor to pointer on hover */
+}
+
+#downloadPDFButton:hover {
+    background-color: #00d3e6; /* Darker green on hover */
+}
+
+#restartAuctionButton{
+    position: absolute;  /* Use absolute positioning */
+    top: 80px;           /* Space from the top (you can adjust this value) */
+    left:80px;          /* Space from the left side (you can adjust this value) */
+    padding: 10px 20px;  /* Padding for the button (optional for better appearance) */
+    background-color: #0044ff; /* Green background color */
+    color: white;        /* White text color */
+    border: none;        /* Remove border */
+    border-radius: 5px;  /* Rounded corners */
+    font-size: 14px;      /* Font size */
+    cursor: pointer; 
+}
+#restartAuctionButton:hover {
+    background-color: #00d3e6; /* Darker green on hover */
+}
+#playButton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-bottom: 20px; /* Space before the dashboard */
+}
+
+#playButton:hover {
+    background-color: #0056b3;
+}
+.role-selection {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.role-selection label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.role-selection select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.role-selection button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.role-selection button:hover {
+    background-color: #0056b3;
+}
+.role-selection {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+}
+
+.role-selection.hidden {
+    display: none; /* Hide the role selection section */
+}
+/* Grid layout for teams */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Team squad container */
+.team-squad {
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Player table */
+.player-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.player-table th, .player-table td {
+    border: 1px solid #444; /* Dark border */
+    padding: 8px;
+    text-align: left;
+}
+
+.player-table th {
+    background-color: #333; /* Dark header */
+    font-weight: bold;
+}
+
+.player-table tr:nth-child(even) {
+    background-color: #2a2a2a; /* Alternate row color */
+}
+
+.player-table tr:hover {
+    background-color: #3a3a3a; /* Hover effect */
+}
+/* Container for all squads */
+.squads-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width as needed */
+    gap: 20px; /* Space between team boxes */
+    max-height: 60vh; /* Fixed height to prevent scrolling */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual team squad box */
+/* .team-squad {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.team-squad h3 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.team-squad ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-squad li {
+    margin-bottom: 5px;
+    color: #fff;
+} */
