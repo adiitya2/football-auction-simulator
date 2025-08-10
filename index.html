@@ -41,36 +41,6 @@ document.addEventListener("click", function () {
 
 </script>
 
-<!-- Welcome Page -->
-<div id="welcomePage" class="page">
-    <div class="welcome-container">
-        <h1>⚽ Football Auction Simulator ⚽</h1>
-        <style>
-            body {
-              background-image: url('stadium.jpg');
-              background-repeat: no-repeat;
-              background-size: cover;   
-            }
-        </style>
-        <form id="userDetailsForm" class="form-container">
-            <div class="form-group">          
-                <audio id="audioPlayer" src="ipl_background.mp3" loop></audio>
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const audio = document.getElementById("audioPlayer");
-                        if (audio) {
-                            audio.volume = 0.5;
-                            audio.play().catch(error => console.log("Autoplay blocked, waiting for user interaction."));
-                        }
-                    });
-                    document.addEventListener("click", function () {
-                        const audio = document.getElementById("audioPlayer");
-                        if (audio && audio.paused) {
-                            audio.play();
-                        }
-                    }, { once: true });
-                </script>
-            </div>
 
             <div class="form-group">
                 <label for="teamSelect">Select Your Football Club:</label>
@@ -240,6 +210,7 @@ document.addEventListener("click", function () {
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
